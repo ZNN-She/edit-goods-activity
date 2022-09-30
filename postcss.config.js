@@ -1,7 +1,7 @@
 export default {
   plugins: {
     'postcss-pxtorem': {
-      rootValue: 750,
+      rootValue: 100,
       propList: ['*'],
       unitPrecision: 5,
     },

@@ -5,6 +5,15 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
+    <script>
+      (function() {
+        //计算html的font-size 写在html里面 如果加载js会出现闪的情况，写在head里更好
+        var deviceWidth = document.documentElement.clientWidth;
+        if (deviceWidth > 812) deviceWidth = 812; // iphonex 分辨率
+        // 因为历史原因根节点的font-size是50px，所以这里要配合pxtorem({ rootValue: 100, propWhiteList: [] })这个插件，在750的分辨率下 font-size是50px
+        document.documentElement.style.fontSize = deviceWidth / 7.5 + 'px';
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
