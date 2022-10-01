@@ -5,5 +5,5 @@ export default {
       propList: ['*'],
       unitPrecision: 5,
     },
-  },
+  }
 };
